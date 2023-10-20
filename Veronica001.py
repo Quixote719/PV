@@ -7,6 +7,12 @@ sns.set_theme()
 # Load an example dataset
 tips = sns.load_dataset("tips")
 
+# tipsJson = json.dumps(tips)
+print(tips.to_json())
+
+with open("tips.json", "w") as json_file:  # “w” means write, if the file does not exist, then create a file.
+    json_file.write(tips.to_json())
+
 # Create a visualization
 sns.relplot(data=tips, x="total_bill", y="tip", col="time", hue="smoker", style="smoker", size="size")
 
