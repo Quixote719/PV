@@ -10,7 +10,7 @@ bar.add_yaxis("Hermes", [5, 20, 36, 10, 75, 90])
 bar.add_yaxis("LV", [15, 8, 32, 20, 36, 70])
 # render 会生成本地 HTML 文件，默认会在当前目录生成 render.html 文件
 # 也可以传入路径参数，如 bar.render("mycharts.html")
-bar.render()
+bar.render("pyChart.html")
 
 
 liquid = Liquid().add("lq", [0.3, 0.7], is_outline_show=False, shape=SymbolType.DIAMOND).set_global_opts(title_opts=opts.TitleOpts(title="Diamond")).render("diamond.html")
