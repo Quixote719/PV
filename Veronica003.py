@@ -10,3 +10,6 @@ print(polish(3, 6))
 print(round(3*1.1), int(3*1.2))
 
 print(1327 * 7.689268673)
+
+t = (3,5,6,7)
+print(t, t[2])
