@@ -1,12 +1,3 @@
-class Dog:
-    
-    # Class Object Attribute
-    species = 'mammal'
-    
-    def __init__(self,breed,name):
-        self.breed = breed
-        self.name = name
-
 class Circle:
     pi = 3.14
 
@@ -23,12 +14,39 @@ class Circle:
     # Method for getting Circumference
     def getCircumference(self):
         return self.radius * self.pi * 2
+    
 
-d1 = Dog('Husky', 'Tata')
-print(d1.species, d1.breed, d1.name)
+class Animal:
+    def __init__(self):
+        print("Animal created")
+
+    def whoAmI(self):
+        print("Animal")
+
+    def eat(self):
+        print("Eating")
+
+
+class Dog(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Dog created")
+
+    def whoAmI(self):
+        print("Dog")
+
+    def bark(self):
+        print("Woof!")
+
+
 
 c = Circle()
 c.setRadius(7)
 print('Radius is: ',c.radius)
 print('Area is: ',c.area)
 print('Circumference is: ',c.getCircumference())
+
+an1 = Animal()
+d1 = Dog('Husky', 'Tata')
+
+
